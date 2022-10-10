@@ -15,14 +15,14 @@ describe('Van Gogh Museum Automation', () => {
   })
  })
 
-  it('Test 1 - User visit "Home Page" and visit the " Ontdek de collectie" Page', () => {
+  it('Test case 1 - User visit "Home Page" and visit the " Ontdek de collectie" Page', () => {
 
     home.visit_home(mydata.url) //load homepage from baseUrl
     home.click_collectie( mydata.link_name) //go to collection search
     collection.page_verification( mydata.collectie_url, mydata.page_title, mydata.label) //perform verification and assertion on the page
   })
   
-  it('Test 2 - User searches for painting using its title', () => {
+  it('Test case 2 - User searches for painting using its title', () => {
 
     collection.visit_collectie( mydata.collectie_url) //load collection
     collection.search_painting( mydata.paint_title) //search for collection
@@ -30,7 +30,7 @@ describe('Van Gogh Museum Automation', () => {
 
   })
 
-  it('Test 3 - User selects a specific art', () => {
+  it('Test case 3 - User selects a specific art', () => {
      
     collection.visit_collectie( mydata.collectie_url) //load collection
     collection.search_painting( mydata.paint_title) //search for collection
